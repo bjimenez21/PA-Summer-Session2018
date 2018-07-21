@@ -7,20 +7,80 @@ body, html {
   margin: 0;
 }
 
+div {
+  color: white;
+}
 .bg {
   background-image: url("Sunrise.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 16px;
+  left: 1000px;
+}
+
+.top-left {
+  position: absolute;
+  bottom: 500px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  bottom: 500px;
+  left: 1000px;
+}
+
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
 }
 </style>
 </head>
 <body>
 
-  <div class="bg"></div>
+  <div class="bg">
+    <div class="bottom-left"> Bottom Left</div>
+    <div class="bottom-right"> Bottom Right</div>
+    <div class="top-right"> Top Right </div>
+    <div class="top-left"> Top Left </div>
+    <div class="centered"> DON'T move your mouse <div>Time left = <span id="timer"></span></div> </div>
+  </div>
+  <script>
+    document.getElementById('timer').innerHTML = 10 + ":" + 00;
+    startTimer();
 
+    function startTimer() {
+      var presentTime = document.getElementById('timer').innerHTML;
+      var timeArray = presentTime.split(/[:]+/);
+      var m = timeArray[0];
+      var s = checkSecond((timeArray[1] -  1));
+      if(s==59){m=m-1}
+      document.getElementById('timer').innerHTML = m + ":" + s;
+      setTimeout(startTimer, 1000);
+    }
+    function checkSecond(sec) {
+      if (sec < 10 && sec >= 0) {sec = "0" + sec};
+      if (sec < 0) {sec = "59"};
+      return sec;
+    }
+  </script>
 </body>
-<script>
-</script>
 </html>
