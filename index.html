@@ -7,16 +7,65 @@
   a {
     color: #8BBEB2
   }
-  .headers {
-    text-shadow: 1px 0.7px rgb(80,81,79);
-    font-family: "Raleway";
-    font-size: 30px;
+
   }
   h1 {
     font-size: 40px;
     font-family: "Raleway";
     text-shadow: 1px 0.7px rgb(80,81,79);
   }
+  #buttons {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  #buttons a {
+    width: 60%;
+    background-color: #FFEEAB;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  #buttons a:active {
+    transform: translateY(2px);
+  }
+
+  .content-box {
+    margin: auto;
+    width: 93%;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .inner {
+    width: 60%;
+    height: 100%;
+  }
+
+  #basicinformation .inner {
+    background-color: #FFEEAB;
+  }
+
+  #bio .inner {
+    background-color: #FFEEAB;
+  }
+
+  #projects .inner {
+    background-color: #FFEEAB;
+  }
+
+  #ethicalreflections .inner {
+    background-color: #FFEEAB;
+  }
+
+  #other .inner {
+    background-color: #FFEEAB;
+  }
+
   div {
     color:rgb(80,81,79);
     font-family: georgia;
@@ -41,22 +90,36 @@
 <div>
   <h1 style="text-align:center">My First Website – Mi Primer Sitio De Internet </h1>
 </div>
-<div>
-  <p class="headers"> <strong>Basic Information</strong> </p>
+<div id="buttons">
+  <a onclick="showBasic()">Basic Information</a>
+  <a onclick="showBio()">Bio</a>
+  <a onclick="showProjects()">Projects</a>
+  <a onclick="showEthicalreflections()">Ethical Reflections</a>
+  <a onclick="showOther()">Other</a>
+</div>
+<div class="content-box" id="basicinformation">
+  <div class="inner">
+  <h1> <strong>Basic Information</strong> </h1>
   <p>Hi I am Bryan Jimenez, I am currently a student at Phillips Academy in Andover, Massachusetts. My github page is <a href="https://github.com/bjimenez21"> linked here</a>.</p>
 </div>
-<div>
-  <p class="headers"> <strong>Bio</strong> </p>
+</div>
+<div class="content-box" id="bio">
+  <div class="inner">
+  <h1> <strong>Bio</strong> </h1>
   <p>I was born on May 29th, 2003 in the city of Passaic, New Jersey to two mexican immigrants. I attended public school for elementary and middle school but through NJSEEDS, I could apply to Phillips Academy as a 9th grader. I am currently attending PA, and at the writing of this site I am in my summer vacation, about to head into 10th grade. This website was originally created as part of a project for Dr. Zufelt's Summer Session Computer Science Class, meant to be a kind of portfolio to post work that I am particularly proud of and want to display to the world. I hope that whoever is reading this webpage can see the hard work that I've put into this website (note those rounded corners, padded boxes and that minor shadow for the headers) and the work I've put into what I am showcasing. </p>
 </div>
-<div>
-  <p class="headers"> <strong>Projects</strong> </p>
+</div>
+<div class="content-box" id="projects">
+  <div class="inner">
+  <h1> <strong>Projects</strong> </h1>
   <ol>
     <li> The first project I would like to display is this website. Here is a link if you'd like to save it for later updates. <a href="https://bjimenez21.github.io/summercs2018/"> https://bjimenez21.github.io/summercs2018/</a></li>
   </ol>
 </div>
-<div>
-  <p class="headers"> <strong>Ethical Reflections</strong> </p>
+</div>
+<div class="content-box" id="ethicalreflections">
+  <div class="inner">
+  <h1> <strong>Ethical Reflections</strong> </h1>
   <ol>
     <li>
       Here is a link to my first Ethical Reflection on Machine Bias: <a href="ethref1.html">Ethical Reflection Number One</a>
@@ -69,8 +132,58 @@
     </li>
   </ol>
 </div>
-<div>
-  <p class="headers"> <strong>Other</strong> </p>
 </div>
+<div class="content-box" id="other">
+  <div class="inner">
+  <h1> <strong>Other</strong> </h1>
+</div>
+</div>
+<script>
+  var basicinformation = document.getElementById("basicinformation");
+  var bio = document.getElementById("bio");
+  var projects = document.getElementById("projects");
+  var ethicalreflections = document.getElementById("ethicalreflections");
+  var other = document.getElementById("other")
+
+  function showBasic(){
+    basicinformation.style.visibility = "visible";
+    bio.style.visibility = "hidden";
+    projects.style.visibility = "hidden";
+    ethicalreflections.style.visibility = "hidden";
+    other.style.visibility = "hidden";
+  }
+
+  function showBio(){
+    basicinformation.style.visibility = "hidden";
+    bio.style.visibility = "visible";
+    projects.style.visibility = "hidden";
+    ethicalreflections.style.visibility = "hidden";
+    other.style.visibility = "hidden";
+  }
+
+  function showProjects(){
+    basicinformation.style.visibility = "hidden";
+    bio.style.visibility = "hidden";
+    projects.style.visibility = "visible";
+    ethicalreflections.style.visibility = "hidden";
+    other.style.visibility = "hidden";
+  }
+
+  function showEthicalreflections(){
+    basicinformation.style.visibility = "hidden";
+    bio.style.visibility = "hidden";
+    projects.style.visibility = "hidden";
+    ethicalreflections.style.visibility = "visible";
+    other.style.visibility = "hidden";
+  }
+
+  function showOther(){
+    basicinformation.style.visibility = "hidden";
+    bio.style.visibility = "hidden";
+    projects.style.visibility = "hidden";
+    ethicalreflections.style.visibility = "hidden";
+    other.style.visibility = "visible";
+  }
+</script>
 </body>
 </html>
