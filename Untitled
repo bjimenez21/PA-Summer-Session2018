@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+.header{
+  display: inline-block;
+  width: 400px;
+  height: 125px;
+  padding-left: 400px;
+}
+.header2{
+  display: inline-block;
+  width: 110px;
+  height: 125px;
+  float: right;
+}
+.designb{
+  text-align: center;
+  background-color: #466289;
+  height: 70px;
+}
+#editbutton{
+  height: 23px;
+  border-radius: 5px;
+  width: 105px;
+  border: 2px solid lightblue;
+  background-color: #A0AEC3;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+  </style>
+<title>24/7 Project</title>
+<img class="header" src="https://previews.dropbox.com/p/thumb/AAIa1DAqM8Rp-KfYcXdjpIrp2TY3dJ03lLJ6xYCWBuCsnG7KzVgVh03v_ejyiCMoKhFYq4GmeW5r4DtEHc7R6HvJoI5X6WcPDaKn2w6GcqBy_rzJ1SEpGCC1it-iGm8Mgcq_NpQNAMd0AOsqpEykbgMAjZI0KER9bE-lrp1I9TgGVA/p.png?preserve_transparency=1&size=2048x1536&size_mode=3">
+<img class="header2" src="https://previews.dropbox.com/p/thumb/AAJ1GFucY1P2IKZPOHGaV4hDt6J5wSMcilLeIl72OhQ9NnzML6i5bYxHlS8PSfHblktN55ue8HGkB-HcGJhqVr1bAazK1UhttH5MjaXB7R2w_8mgKJLlSCeNWlClAnRXNq4jWzGsa9Io3Sxf6gxkcH6AZiL0rbjuSb-JerHlnuDxXA/p.jpeg?size=2048x1536&size_mode=3">
+<img class="header2" src="https://previews.dropbox.com/p/thumb/AAKh0r1fv-ZmFj3gv4yj33STQy8NZ147Q7LEGUw42s4YuXbaHXxGpzh3dzC__nL-kDGojJcw7Ub1jYXmGAa1fDAGJj-m4X4W2891nG8RRUPF1jNFrQ5rSudOFT7jSBaFF5cQAfIY9G8L8G5J2yz86yRFDgBzNvXvUXNO6DxPKrwifQ/p.png?preserve_transparency=1&size=2048x1536&size_mode=3">
+<img class="header2" src="https://previews.dropbox.com/p/thumb/AAKNju_lJF_TRep5rrYZQD_PyVzC814-mjjnxToZ_TUssH5rKeA64XnxuM4_mQtZZ_XSz_Wqya1nBAwSGC03kVIIHdhEbKdCeDEJRLioPJz2RAKm032FwukCyGjuX_NuXgRUF4-r86FSR3RiaTqnOzJ6RWDBsESG6EXJdk8uGLAZSA/p.png?preserve_transparency=1&size=2048x1536&size_mode=3">
+<img class="header2" src="https://previews.dropbox.com/p/thumb/AALlaKZbkN-M4G1lon1Fd1XWYzBgztztS6p5AngArevGwkvtqrVlS5FBz71Vptd12c2mT_QutjrJ44H3GJ_hyI1IWpRF7HlnIeLuJaaCE492ytLLf_oU-IwJnW3OanQShgzGMi6GPI9R8YyR_EnovpaeYjWBgt9GFDrMpDjRrvdsJQ/p.png?preserve_transparency=1&size=2048x1536&size_mode=3">
+<img class="header2" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png">
+<div class="designb">
+<h2>
+<button onclick="myFunction1()" id="editbutton">About</button>
+<button onclick="myFunction2()" id="editbutton">World Cup</button>
+<button onclick="myFunction3()" id="editbutton">News</button>
+<button onclick="myFunction4()" id="editbutton">Transfers</button>
+<button onclick="myFunction5()" id="editbutton">Clubs</button>
+</h2>
+</html>
